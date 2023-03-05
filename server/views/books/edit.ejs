@@ -1,17 +1,22 @@
 <% include ../partials/header.ejs %>
 
+
+
+
 <div class="container">
     <div class="row">
         <div class="offest-md-2 col-md-8">
             <h1><%= title%></h1>
-
+            
             <form class="form" method="POST">
                 <div class="form-group">
                     <label for="TitleTextField">Book Title</label>
                     <input type="text" class="form-control"
                     id="TitleTextField"
                     placeholder="Enter the Book Title"
-                    name="Title" required>
+                    name="Title"
+                    value="<%= books.Title %>"
+                    required>
                 </div>
 
                 <div class="form-group">
@@ -19,7 +24,9 @@
                     <input type="text" class="form-control"
                     id="DescriptionTextField"
                     placeholder="Enter Description of book"
-                    name="Description" required>
+                    name="Description" 
+                    value="<%= books.Description %>"
+                    required>
                 </div>
 
                 <div class="form-group">
@@ -27,7 +34,9 @@
                     <input type="number" class="form-control"
                     id="PriceTextField"
                     placeholder="Enter Price"
-                    name="Price" required>
+                    name="Price"
+                    value="<%= books.Price %>"
+                    required>
                 </div>
 
                 <div class="form-group">
@@ -35,26 +44,31 @@
                     <input type="text" class="form-control"
                     id="authorTextField"
                     placeholder="Enter Author's name"
-                    name="Author" required>
-                </div>
+                    name="Author"
+                    value="<%= books.Author%>"
+                    required>
+               </div>
 
                 <div class="form-group">
                     <label for="GenreTextField">Genre</label>
                     <input type="text" class="form-control"
                     id="GenreTextField"
                     placeholder="Enter Genre"
-                    name="Genre" required>
+                    name="Genre" 
+                    value="<%= books.Genre %>"
+                    required>
                 </div>
 
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
 
-                    <a href="/books" class="btn btn-warning">
+                    <a href="/book-list" class="btn btn-warning">
                         <i class="fas fa-undo"></i>Cancel</a>
             </form>
         </div>
     </div>
 </div>
+
 
 
 
